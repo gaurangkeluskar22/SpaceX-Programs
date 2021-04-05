@@ -7,7 +7,7 @@ function Displaydata() {
   const [successful_launch_filter, set_successful_launch_filter] = useState();
   const [successful_land_filter, set_successful_land_filter] = useState();
   const [launch_year, set_launch_year] = useState();
-  
+
   const launch_year_data = [
     "2006",
     "2007",
@@ -39,7 +39,7 @@ function Displaydata() {
     if (launch_year != undefined) {
       url += `&launch_year=${launch_year}`;
     }
-    console.log(url);
+
     const res = await axios.get(url);
     set_spacex_data(await res.data);
   };
@@ -47,8 +47,6 @@ function Displaydata() {
   // inital data fetch
 
   useEffect(async () => {
-
-    
     const res = await axios.get(
       "https://api.spacexdata.com/v3/launches?limit=100"
     );
@@ -73,7 +71,11 @@ function Displaydata() {
         }}
       >
         <h4
-          style={{ fontWeight: "bolder", fontFamily: "Arial", padding:"5px 0px 0px 5px" }}
+          style={{
+            fontWeight: "bolder",
+            fontFamily: "Arial",
+            padding: "5px 0px 0px 5px",
+          }}
         >
           Filters
         </h4>
@@ -82,28 +84,30 @@ function Displaydata() {
         </h4>
         <hr style={{ color: "#8B8C92", width: 100, marginTop: -10 }}></hr>
 
-        <div className={(header.filterbutton)} style={{paddingBottom:10}}> 
-        {launch_year_data.map((value, index) => {
-          return (
-            <div key={index} className={(header.filterbuttoncol)}>
-              <center><input
-                type="submit"
-                value={value}
-                onClick={() => {
-                  set_launch_year(launch_year == value ? undefined : value);
-                }}
-                className={
-                  launch_year == value
-                    ? header.filterselected
-                    : header.filternotselected
-                }
-              ></input></center>
-            </div>
-          );
-        })}
+        <div className={header.filterbutton} style={{ paddingBottom: 10 }}>
+          {launch_year_data.map((value, index) => {
+            return (
+              <div key={index} className={header.filterbuttoncol}>
+                <center>
+                  <input
+                    type="submit"
+                    value={value}
+                    onClick={() => {
+                      set_launch_year(launch_year == value ? undefined : value);
+                    }}
+                    className={
+                      launch_year == value
+                        ? header.filterselected
+                        : header.filternotselected
+                    }
+                  ></input>
+                </center>
+              </div>
+            );
+          })}
         </div>
         <br></br>
-        <h4 style={{ textAlign: "center", color: "#8B8C92"}}>
+        <h4 style={{ textAlign: "center", color: "#8B8C92" }}>
           Successful Launch
         </h4>
         <hr style={{ color: "#8B8C92", width: 100, marginTop: -15 }}></hr>
@@ -158,7 +162,7 @@ function Displaydata() {
                 ? header.filterselected
                 : header.filternotselected
             }
-            style={{ marginRight: 10 }}
+            style={{ marginRight: 10,marginBottom:20}}
           />
           <input
             type="submit"
@@ -173,7 +177,7 @@ function Displaydata() {
                 ? header.filterselected
                 : header.filternotselected
             }
-            style={{ marginLeft: 10 }}
+            style={{ marginLeft: 10,marginBottom:20 }}
           />
         </center>
       </div>
@@ -237,7 +241,7 @@ function Displaydata() {
             })
           ) : (
             <div>
-              <center className={(header.loader)}></center>
+              <center className={header.loader}></center>
             </div>
           )}
         </center>
