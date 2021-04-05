@@ -225,15 +225,16 @@ function Displaydata() {
                   <p>
                     Successful Launch:{" "}
                     <span style={{ color: "#8B8C92", fontFamily: "Arial" }}>
-                      {value.launch_success.toString()}
+                      {value.launch_success==undefined?"null":
+                      value.launch_success.toString()}
                     </span>
                   </p>
                   <p>
                     Successful Land:{" "}
                     <span style={{ color: "#8B8C92", fontFamily: "Arial" }}>
-                      {value.land_success == null
+                      {value.rocket.first_stage.cores[0].land_success == undefined
                         ? "null"
-                        : value.land_success.toString()}
+                        : value.rocket.first_stage.cores[0].land_success.toString()}
                     </span>
                   </p>
                 </div>
