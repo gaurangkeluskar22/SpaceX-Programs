@@ -1,0 +1,196 @@
+.body {
+  margin: 0px;
+  margin-top: -20px;
+  box-sizing: border-box;
+}
+
+.Header {
+  color: black;
+  padding: 5px 0px 0px 5px;
+  font-family: Arial;
+}
+
+.filterselected {
+  color: black;
+  background-color: #71aa01;
+  outline: none;
+  border: none;
+  padding: 5px 4px 5px 4px;
+}
+
+.filternotselected {
+  color: black;
+  background-color: #c3df9c;
+  outline: none;
+  border: none;
+  padding: 5px 4px 5px 4px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.filterbutton{
+    width:100%;
+    float: left;
+}
+
+.filterbuttoncol{
+    width:30%;
+    float: left;
+    padding: 3px 3px 3px 3px;
+}
+
+
+
+.loader {
+    border: 5px solid black;
+    border-radius: 50%;
+    border-top: 5px solid #71aa01;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+@media screen and (min-width:700px) and (max-width: 1024px) {
+  /* For tablets: */
+  .cols1 {
+    width: 8.33%;
+    float: left;
+    padding: 15px;
+  }
+  .cols2 {
+    width: 15%;
+    float: left;
+    padding: 15px;
+  }
+  .cols3 {
+    width: 25%;
+    float: left;
+    padding: 15px;
+  }
+  .cols4 {
+    width: 33.33%;
+    float: left;
+    padding: 15px;
+  }
+  .cols5 {
+    width: 41.66%;
+    float: left;
+    padding: 15px;
+  }
+  .cols6 {
+    width: 50%;
+    float: left;
+    padding: 15px;
+  }
+  .cols7 {
+    width: 58.33%;
+    float: left;
+    padding: 15px;
+  }
+  .cols8 {
+    width: 66.66%;
+    float: left;
+    padding: 15px;
+  }
+  .cols9 {
+    width: 70%;
+    float: left;
+    padding: 15px;
+  }
+  .cols10 {
+    width: 83.33%;
+    float: left;
+    padding: 15px;
+  }
+  .cols11 {
+    width: 91.66%;
+    float: left;
+    padding: 15px;
+  }
+  .cols12 {
+    width: 100%;
+    float: left;
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width:1025px) and (max-width: 1440px) {
+  /* For desktop: */
+  .cols1 {
+    width: 8.33%;
+    float: left;
+    padding: 15px;
+  }
+  .cols2 {
+    width: 16.66%;
+    float: left;
+    padding: 15px;
+  }
+  .cols3 {
+    width: 25%;
+    float: left;
+    padding: 15px;
+  }
+  .cols4 {
+    width: 16.66%;
+    float: left;
+    padding: 15px;
+  }
+  .cols5 {
+    width: 41.66%;
+    float: left;
+    padding: 15px;
+  }
+  .cols6 {
+    width: 50%;
+    float: left;
+    padding: 15px;
+  }
+  .cols7 {
+    width: 58.33%;
+    float: left;
+    padding: 15px;
+  }
+  .cols8 {
+    width: 66.66%;
+    float: left;
+    padding: 15px;
+  }
+  .cols9 {
+    width: 75%;
+    float: left;
+    padding: 15px;
+  }
+  .cols10 {
+    width: 83.33%;
+    float: left;
+    padding: 15px;
+  }
+  .cols11 {
+    width: 91.66%;
+    float: left;
+    padding: 15px;
+  }
+  .cols12 {
+    width: 100%;
+    float: left;
+    padding: 15px;
+  }
+}
