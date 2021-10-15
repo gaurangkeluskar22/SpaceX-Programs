@@ -4,6 +4,30 @@
   box-sizing: border-box;
 }
 
+
+.loader {
+    border: 5px solid black;
+    border-radius: 50%;
+    border-top: 5px solid #71aa01;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
 .Header {
   color: black;
   padding: 5px 0px 0px 5px;
@@ -44,27 +68,6 @@
 }
 
 
-
-.loader {
-    border: 5px solid black;
-    border-radius: 50%;
-    border-top: 5px solid #71aa01;
-    width: 30px;
-    height: 30px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-  }
-  
-  /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
 
 
 @media screen and (min-width:700px) and (max-width: 1024px) {
@@ -194,3 +197,8 @@
     padding: 15px;
   }
 }
+
+/*
+  updated code for desktop screen
+*/
+
